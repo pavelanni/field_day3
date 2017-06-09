@@ -1,0 +1,132 @@
+{% load staticfiles %}
+
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>NFARL Field Day 2017</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/jumbotron.css' %}" />
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Welcome to North Fulton Amateur Radio League's Field Day 2017!</a>
+          <img src="{% static "visitors/nfarlLogoTransparentBackground_medium.gif" %}" alt="NFARL logo" style="width:50px;height:50px;" />
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>NFARL Field Day 2017</h2>
+          <p>North Fulton Amateur Radio League welcomes you at the annual Field Day! </p>
+
+          <p>ARRL Field Day is the single most popular on- the -air event held annually in the US 
+          and Canada. On the fourth weekend of June of each year, more than 35,000 radio 
+          amateurs  gather  with  their  clubs,  groups  or  simply  with  friends  to  operate  from  
+          remote locations. </p>
+
+          <p>Field Day is a picnic, a campout, practice for emergencies, an informal contest and, 
+          most of all, FUN! </p>
+
+          <p>It  is  a  time  where  many  aspects  of  Amateur  Radio  come  together  to  highlight  our  
+          many roles. While some will treat it as a contest, other groups use the opportunity to practice their emergency response 
+          capabilities. It is an excellent opportunity to demonstrate Amateur Radio to the organizations 
+          that Amateur Radio might serve in an emergency, as well as the general public. For many clubs, ARRL
+          Field Day is one of the highlights of their annual calendar. </p>
+
+          <p>The  contest  part  is  simply  to  contact  as  many  other  stations  as  possible  and  to  
+          learn  to  operate  our  radio  gear  in  abnormal situations and less than optimal conditions. </p>
+
+          <p>We use these same skills when we help with events such as marathons and bike- a-thons; fund-raisers 
+          such as walk-a-thons; celebrations such as parades; and exhibits at fairs, malls and museums — 
+          these are all large, preplanned, non-emergency activities. </p>
+
+          <p>But despite the development of very complex, modern communications systems — 
+          or maybe because they ARE so complex — ham radio has been called into action again and again 
+          to provide communications in crises when it really matters.  Amateur Radio people (also called 
+          “hams”) are well known for our communications support in real disaster and post-disaster situations. </p>
+
+          <p><b>Don't forget to register using the form to the right!</b> </p>
+        </div>
+        <div class="col-md-6">
+          {% block content %}
+
+          {% endblock content %}
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>CW Station</h2>
+          <p>This station is located ...  Station is working exclusively using CW mode (a.k.a. Morse Code). 
+          You can listen to the exchange, but please don't disturb the operators.  </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Phone Station</h2>
+          <p>This station is located... It uses Phone mode (a.k.a. SSB or single-side band)</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Swing Station</h2>
+          <p>This station is located ... It uses different modes, including CW, Phone and Digital. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+
+      <footer>
+        <p>&copy; 2017 North Fulton ARL</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

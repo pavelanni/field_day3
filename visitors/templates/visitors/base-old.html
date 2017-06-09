@@ -1,0 +1,37 @@
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NFARL Field Day 2017</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/text.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/base.css' %}" />
+	</head>
+
+	<body>
+		<div id="container" >
+      <div id="header" >
+        <div id="title">
+        <h2>North Fulton ARL Field Day 2017</h2>
+        </div>
+        <div id="logo">
+        <img src="{% static "visitors/nfarlLogoTransparentBackground_medium.gif" %}" alt="NFARL logo" />
+        </div>
+      </div>
+      <div id="sidebar" >
+        <p>NFARL Home</p>
+        <p>Field Day Map</p>
+        <p>Field Day Teams</p>
+      </div>
+
+      <div id="form" >
+
+      {% block content %}{% endblock content %}
+      </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "visitors/base.html" %}
+
+{% block content %}
+
+<h3>List of visitors</h3>
+
+<table>
+	<tr>
+		<th>First name</th>
+		<th>Last name</th>
+		<th>Call sign</th>
+		<th>Age</th>
+	</tr>
+	{% for v in all_visitors %}
+	<tr>
+		<td>{{ v.first_name }}</td>
+		<td>{{ v.last_name }}</td>
+		<td>{{ v.call_sign }}</td>
+		<td>{{ v.age }}</td>
+	</tr>
+	{% endfor %}
+</table>
+
+{% endblock %}
