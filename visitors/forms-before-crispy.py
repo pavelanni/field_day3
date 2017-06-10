@@ -1,5 +1,4 @@
 from django import forms
-from django.utils.translation import ugettext_lazy as _
 
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
@@ -20,13 +19,6 @@ class VisitorForm(forms.ModelForm):
                   'first_time',
                   'younger_than_18',
                   )
-        labels = {
-            'nfarl_member': _('NFARL Member'),
-        }
-
-        help_texts = {
-            'nfarl_member': _('Are you a member of NFARL?'),
-        }
 
     helper = FormHelper()
     helper.form_method = 'POST'
