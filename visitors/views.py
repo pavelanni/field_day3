@@ -1,11 +1,11 @@
-from django.shortcuts import render, HttpResponse, redirect
-from django.template import loader
-
+from django.shortcuts import render, redirect
 from .forms import VisitorForm
 from .models import Visitor
 
+
 def index(request):
-    return HttpResponse("Hello, world! Here is the first Visitors page.")
+    return render(request, 'visitors/index.html')
+
 
 def new(request):
     form_class = VisitorForm
@@ -24,6 +24,7 @@ def new(request):
         'form': form_class,
         'visitor_number': visitor_number,
     })
+
 
 def list(request):
     all_visitors = Visitor.objects.all()
