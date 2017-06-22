@@ -50,39 +50,11 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h2>NFARL Field Day 2017</h2>
-          <p>North Fulton Amateur Radio League welcomes you at the annual Field Day! </p>
-
-          <p>ARRL Field Day is the single most popular on- the -air event held annually in the US 
-          and Canada. On the fourth weekend of June of each year, more than 35,000 radio 
-          amateurs  gather  with  their  clubs,  groups  or  simply  with  friends  to  operate  from  
-          remote locations. </p>
-
-          <p>Field Day is a picnic, a campout, practice for emergencies, an informal contest and, 
-          most of all, FUN! </p>
-
-          <p>It  is  a  time  where  many  aspects  of  Amateur  Radio  come  together  to  highlight  our  
-          many roles. While some will treat it as a contest, other groups use the opportunity to practice their emergency response 
-          capabilities. It is an excellent opportunity to demonstrate Amateur Radio to the organizations 
-          that Amateur Radio might serve in an emergency, as well as the general public. For many clubs, ARRL
-          Field Day is one of the highlights of their annual calendar. </p>
-
-          <p>The  contest  part  is  simply  to  contact  as  many  other  stations  as  possible  and  to  
-          learn  to  operate  our  radio  gear  in  abnormal situations and less than optimal conditions. </p>
-
-          <p>We use these same skills when we help with events such as marathons and bike- a-thons; fund-raisers 
-          such as walk-a-thons; celebrations such as parades; and exhibits at fairs, malls and museums — 
-          these are all large, preplanned, non-emergency activities. </p>
-
-          <p>But despite the development of very complex, modern communications systems — 
-          or maybe because they ARE so complex — ham radio has been called into action again and again 
-          to provide communications in crises when it really matters.  Amateur Radio people (also called 
-          “hams”) are well known for our communications support in real disaster and post-disaster situations. </p>
-
-          <p><b>Don't forget to sign-in using the form to the right!</b> </p>
+        <div class="col-md-8">
+          <h2>NFARL Field Day Map</h2>
+          <img class="img-rounded center-block" src="{% static "visitors/FD_location_labels.jpg" %}" alt="FD Map" style="width:580px;" />
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           {% block content %}
 
           {% endblock content %}
@@ -93,21 +65,32 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h2>Morse Code (CW) Station</h2>
-          <p>This station is located ...  Station is working exclusively using Morse Code mode (aka CW). 
+          <p>This station is located at the South-West corner of the parking lot. 
+          Station is working exclusively using Morse Code mode (aka CW). 
           You can listen to the exchange, but please don't disturb the operators.  </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>CW Station captain is <b>Pavel AC4PA</b>. Please contact him if you have any questions.</p>
         </div>
-        <div class="col-md-4">
-          <h2>Phone Station</h2>
-          <p>This station is located... It uses Phone mode (a.k.a. SSB or single-side band)</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-md-3">
+          <h2>Phone/Swing Stations</h2>
+          <p>These stations are located at the North-East corner of the parking lot.
+          They mostly use Phone mode (a.k.a. SSB or single-side band), but also can use CW and Digital. </p>
+          <p>Stations captain is <b>Nathan K4NHW</b>. Please contact him if you have any questions.</p>
        </div>
-        <div class="col-md-4">
-          <h2>Swing Station</h2>
-          <p>This station is located ... It uses different modes, including CW, Phone and Digital. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-md-3">
+          <h2>Satellite Station</h2>
+          <p>This station is located at the North-East corner of the parking lot. 
+          It uses Amateur Radio satellites for contacts. You can watch the map and see when the next satellite 
+         will pass our location. </p>
+          <p>Station captains are <b>Lori K4UPI</b> and <b>Daryl K4RGK</b>. Please contact him if you have any questions.</p>
+        </div>
+        <div class="col-md-3">
+          <h2>Get-on-the-Air (GOTA) Station</h2>
+          <p>This station is located at the South-East corner of the parking lot, next to the sign-in booth.
+          It uses Phone mode and if you've never been on the air before, you can make several contacts there to get 
+          a "taste" of Amateur Radio. </p>
+          <p>Station captain is <b>Mark KK4FOF</b>. Please contact him if you have any questions.</p>
         </div>
       </div>
 
