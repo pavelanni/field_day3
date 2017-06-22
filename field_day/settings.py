@@ -12,6 +12,17 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-info',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+}
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,9 +34,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'x@r^%8gf%fw&b#y9%$ffx##oa3k_xjgxlkgm%%v_uqqs-*8t9n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['.pythonanywhere.com', 'localhost', '127.0.0.1',]
+ALLOWED_HOSTS = ['192.168.1.217', '24.126.168.11',]
 
 
 # Application definition
@@ -118,8 +129,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, "..", "www", "static")
+#STATIC_ROOT = os.path.join(BASE_DIR, "..", "www", "static")
+#STATIC_URL = '/static/'
+STATIC_ROOT = '/var/www/field_day/static/'
 STATIC_URL = '/static/'
+
 
 # Crispy Forms default template pack
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
