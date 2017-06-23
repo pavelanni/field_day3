@@ -4,3 +4,4 @@ __pycache__
 db.sqlite3
 *~
 field_day/settings.py
+export.csv
