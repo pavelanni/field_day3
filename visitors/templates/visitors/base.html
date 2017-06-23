@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'visitors/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'visitors/jumbotron.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/custom.css' %}" />
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -49,6 +50,17 @@
     </nav>
 
     <div class="container">
+      {% if messages %}
+      <div class="row">
+        <div class="col-md-4 col-md-offset-8 alert alert-success alert-dismissable">
+          {% for message in messages %}
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <p{% if message.tags == "success" %} class="alert alert-success"{% endif %}>{{ message }}</p>
+          {% endfor %}
+        </div> 
+      </div>
+      {% endif %}
+
       <div class="row">
         <div class="col-md-8">
           <h2>NFARL Field Day Map</h2>
@@ -108,7 +120,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="{% static 'visitors/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

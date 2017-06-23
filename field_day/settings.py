@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+<<<<<<< HEAD
 
+=======
+>>>>>>> d9068b58b472400bda942a9db87dc1c6e38a9d89
 from django.contrib.messages import constants as messages
 
 MESSAGE_TAGS = {
@@ -21,8 +24,11 @@ MESSAGE_TAGS = {
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d9068b58b472400bda942a9db87dc1c6e38a9d89
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

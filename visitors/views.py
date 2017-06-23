@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+
 from .forms import VisitorForm
 from .models import Visitor
 
@@ -15,6 +17,7 @@ def new(request):
         if form.is_valid():
             visitor = form.save(commit=False)
             visitor.save()
+            messages.success(request, 'Thanks for signing in!', extra_tags='alert')
             return redirect('new')
     else:
         visitor_number = len(Visitor.objects.all()) + 1
