@@ -1,0 +1,5 @@
+{% load staticfiles %}
+	{% for v in all_visitors %}
+  {{ forloop.counter }},{{ v.first_name }},{{ v.last_name }},{{ v.call_sign }},{{ v.nfarl_member }},{{ v.contact_me }},{{ v.email }},{{ v.first_time }},{{ v.younger_than_18 }}<br>
+  {% endfor %}
+

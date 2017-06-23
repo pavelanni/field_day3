@@ -6,7 +6,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^new/$', views.new, name='new'),
     url(r'^list/$', views.list, name='list'),
+    url(r'^export/$', views.export, name='export'),
 
 ]
-
-
