@@ -1,0 +1,8 @@
+html { font-family:Arial, Helvetica, sans-serif; color:#ece889; }
+body {background:#021601; }
+#container {  background-color: #032900; }
+#header {  background:#032900; }
+#sidebar {  background:#032900; }
+#mainContent {  background:#032900; }
+#logo { float:right; width:60px; height:60px; margin:10px; background:#032900; }
+#logo img { width:60px; }

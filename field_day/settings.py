@@ -11,10 +11,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-<<<<<<< HEAD
-
-=======
->>>>>>> d9068b58b472400bda942a9db87dc1c6e38a9d89
 from django.contrib.messages import constants as messages
 
 MESSAGE_TAGS = {
@@ -24,11 +20,8 @@ MESSAGE_TAGS = {
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> d9068b58b472400bda942a9db87dc1c6e38a9d89
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -42,7 +35,7 @@ SECRET_KEY = 'x@r^%8gf%fw&b#y9%$ffx##oa3k_xjgxlkgm%%v_uqqs-*8t9n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.1.217', '24.126.168.11',]
+ALLOWED_HOSTS = ['rpi-01', '192.168.1.217', '127.0.0.1',]
 
 
 # Application definition
@@ -137,7 +130,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 #STATIC_ROOT = os.path.join(BASE_DIR, "..", "www", "static")
 #STATIC_URL = '/static/'
-STATIC_ROOT = '/var/www/field_day/static/'
+#STATIC_ROOT = '/var/www/field_day/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
 
 
